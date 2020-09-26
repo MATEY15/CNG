@@ -1,19 +1,60 @@
-header.header
-	.container.flex-container
-		.logo
-			a.logo-link(href="/")
-				img(src="img/logo.png", alt="")
-		nav.top-menu--wrapper
-			ul.top-menu
-				li.active
-					a(href="#") Грузоперевозки
-				li
-					a(href="#") Квартирный переезд
-				li
-					a(href="#") Вывоз мусора
-				li
-					a(href="#") Вывоз вторсырья
-				li
-					a(href="#") Контакты
-		.phone-head
-			a(href="tel:8977102000").phone-link #[img(src="img/icon/phone-icon.png", alt="", class="icon-phone")] 8 (977) 10-2000
+header(style="background-image: url(img/header-bg2.jpg)").header
+	.right-sidebar
+		ul.right-menu
+			li
+				a(href="#") Contacts
+			li
+				a(href="#") Consutling
+			li.active
+				a(href="#") Blog
+			li
+				a(href="#") Community
+			li
+				a(href="#") Design & Engineering
+			li
+				a(href="#") Commercial Solar
+			li
+				a(href="#") Residential Solar
+			li
+				a(href="#") About Us
+		.pulse-button--wrapper
+			a(href="#").pulse-button
+				+iconSvg('40', '40', '0 0 40 40', 'icon-pencil')
+		//- .pulse-bet
+		//- 	a(href="#").button-head.status-bet
+		//- 		span.icon-play
+		//- 			+iconSvg('40', '40', '0 0 40 40', 'icon-pencil')
+	.container
+		.header-main
+			.logo
+				a(href="#").logo-link
+					img(src="img/logo.png", alt="Logo")
+			
+			.header-content
+				h1 Southern California’s largest solar engineering firmsmall text
+				p We are a California based solar energy engineering company providing solar PV system design, on grid solar system design, and residential solar system design
+				//- p Healing the world. One solar panel at a time.
+			.header-bottom
+				ul.link-copy
+					li
+						a(href="#") Terms of Use
+					li
+						a(href="#") Privacy Statement
+
+		//- .logo
+		//- 	a.logo-link(href="/")
+		//- 		img(src="img/logo.png", alt="")
+		//- nav.top-menu--wrapper
+		//- 	ul.top-menu
+		//- 		li.active
+		//- 			a(href="#") Грузоперевозки
+		//- 		li
+		//- 			a(href="#") Квартирный переезд
+		//- 		li
+		//- 			a(href="#") Вывоз мусора
+		//- 		li
+		//- 			a(href="#") Вывоз вторсырья
+		//- 		li
+		//- 			a(href="#") Контакты
+		//- .phone-head
+		//- 	a(href="tel:8977102000").phone-link #[img(src="img/icon/phone-icon.png", alt="", class="icon-phone")] 8 (977) 10-2000

@@ -1,57 +1,183 @@
 .header
-	padding-top 26px
-	
-	.flex-container
-		display flex
-		flex-wrap wrap
-		flex-direction row
-		justify-content space-between
-		min-height 75px
+	position relative
+	height 100vh
+	background-size cover
+	background-position center 0
+	overflow hidden
 
-.top-menu--wrapper
-	flex-grow 1
-	padding-left 115px
-	padding-top 28px
-
-.top-menu
+.right-sidebar
 	display flex
-	flex-direction row
-	li
-		position relative
-		&:not(:last-child)
-			margin-right 42px
-		&:before
-			position absolute
-			bottom -6px
-			left 0
-			content ''
-			width: 28px
-			height: 2px
-			background-color: #27aec2
-			opacity 0
-			visibility hidden
-			trn(.15s)
-		&.active:before,
-		&:hover:before
-			opacity 1
-			visibility visible
-		a
-			color: #52565f
-			font-family: mr
-			font-size: 14px
-			text-decoration none
-
-.phone-head
-	padding-top 28px
-
-.phone-link
-	color: #52565f
-	font-family: mb
-	font-size: 14px
-	text-decoration none
-	display flex
-	flex-direction row
 	align-items center
+	position absolute
+	right -210px
+	top 0
+	min-width 210px
+	height 100vh
+	background: linear-gradient(270deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.4) 100%)
+	opacity 0
+
+.right-menu
+	// position: absolute
+	-webkit-transform: rotateZ(90deg) translate(0, -210px)
+	transform: rotateZ(90deg) translate(0, -210px)
+	-webkit-transform-origin: top left
+	transform-origin: top left
+	text-align: center
+	// top: 50%
+	// left: 192px
+	// min-width: 500px
+	// margin-top: -250px
+	li
+		margin-bottom 5px
+		&.active,
+		&:hover
+			a
+				c#fff
+	a
+		font-family fo
+		font-size: 12px
+		font-weight 400
+		line-height: 16px
+		color: #191919
+		text-decoration none
+		trn(.2s)
+
+
+.header-main
+	padding-top 30px
+	padding-bottom 25px
+	height 100vh
+	display flex
+	flex-direction column
+	justify-content space-between
+
+.header-content
+	color #fff
+	h1
+		position relative
+		top -150px
+		opacity 0
+		font-family: Arial
+		font-weight: bold
+		font-size: 56px
+		line-height: 64px
+		color #fff
+		max-width 740px
+		margin-bottom 34px
+	p
+		position relative
+		left 200px
+		opacity 0
+		font-family: fo
+		font-style: normal
+		font-weight: 300
+		font-size: 28px
+		line-height: 40px
+		max-width 590px
+
+.logo-link
+	position relative
+	top -80px
+	display inline-block
+	opacity 0
+
+.header-bottom
+	padding-top 50px
+
+.link-copy
+	position relative
+	bottom -80px
+	opacity 0
+	li
+		display inline-block
+		&:last-child
+			&:after
+				display none
+		&:after
+			position relative
+			content '|'
+			margin 0 6px 0 8px
+			color #fff
+		&:hover a
+			color #F37E34
+	a
+		font-size: 14px
+		line-height: 20px
+		color #fff
+		text-decoration none
+		trn(.2s)
+
+
+// Button Header
+
+.pulse-button
+	position absolute
+	display flex
+	align-items center
+	justify-content center
+	bottom -165px
+	right -65px
+	width 200px
+	height 200px
+	background #fff
+	brr(50%)
+	opacity 0
+
+	&:before
+		-webkit-transform: scale(1)
+		transform: scale(1)
+		-webkit-animation: pulse 5s 2s infinite ease-out
+		animation: pulse 5s 2s infinite ease-out
+
+	&:after
+		-webkit-transform: scale(1.15);
+		transform: scale(1.15);
+		-webkit-animation: pulse 4s 1s infinite ease
+		animation: pulse 4s 1s infinite ease
 	
-	& .icon-phone
-		margin-right 8px
+	&:before, &:after
+		content: ''
+		position: absolute
+		top: -25px
+		left: -25px
+		width: 250px
+		height: 250px
+		border: 1px solid rgb(255 255 255)
+		box-shadow: 0 0 20px 1px rgba(255, 255, 255, .7) inset
+		border-radius: 50%
+		z-index: 100
+
+@-webkit-keyframes pulse
+	0% {
+		-webkit-transform: scale(0.6);
+		transform: scale(0.6);
+		opacity: 0;
+	}
+
+	90% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+		opacity: 1;
+	}
+
+	100% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+		opacity: 0;
+	}
+
+@keyframes pulse
+	0%
+		-webkit-transform: scale(0.6)
+		transform: scale(0.6)
+		opacity: 0
+
+	90%
+		-webkit-transform: scale(1)
+		transform: scale(1)
+		opacity: 1
+
+	100%
+		-webkit-transform: scale(1)
+		transform: scale(1)
+		opacity: 0
