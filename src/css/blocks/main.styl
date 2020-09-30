@@ -1,0 +1,127 @@
+.animate-item
+  trn(.7s)
+  tt(0, 100px)
+  opacity 0
+  &.add-animate
+    tt(0, 0px)
+    opacity 1
+
+.slider-items
+  trn(.7s)
+  tt(0, 100px)
+  opacity 0
+
+#fullpage
+  .section
+    min-height: 500px
+
+.height-125
+  height 125px
+.offset-padding--image-main
+  padding-top 236px
+  padding-bottom 127px
+.image-main
+  display flex
+  margin 0 -24px
+  .image-main--items
+    padding 0 24px
+    width calc(100% / 3)
+    trn(.7s)
+    tt(0, 100px)
+    opacity 0
+    &:hover
+      .img-main--name
+        c #f37e34
+    a
+      text-decoration none
+      display block
+    .img-main--name
+      display block
+      text-align center
+      font-family: fa
+      font-style: normal
+      font-weight: 700
+      font-size: 24px
+      line-height: 32px
+      color: #191919
+      margin-top 24px
+      trn(.1s)
+    .img-wrapper
+      display block
+      position relative
+      max-width 360px
+      width 100%
+      height 360px
+      overflow hidden
+      img
+        position absolute
+        top 50%
+        left 50%
+        width 100%
+        height auto
+        tt(-50%, -50%)
+
+.bloch
+  .section
+    // height 100vh
+    // padding 250px 0
+.section-slider
+  padding 72px 0 196px
+.home-sections
+  color: #191919
+  padding 115px 0
+  width 100%
+  display flex
+  align-items center
+  .heading-default
+    margin-bottom 48px
+    h4
+      font-family: fa
+      font-style: normal
+      font-weight: bold
+      font-size: 68px
+      line-height: 84px
+      color: #191919
+  p
+    font-family: fo
+    font-style: normal
+    font-weight: 300
+    font-size: 28px
+    line-height: 40px
+    margin-bottom 30px
+  .button-wrapper
+    margin-top 90px
+
+
+// Slider
+
+.home-slider
+  position relative
+  .slick-list
+    padding 30px 0
+  
+  .slick-arrow
+    position absolute
+    top 50%
+    margin-top -24px
+    z-index 100
+    cursor pointer
+    &.slider-home--prev
+      left -65px
+    &.slider-home--next
+      right -65px
+      img
+        transform: rotateZ(180deg)
+
+.slider-items
+  position relative
+  // box-shadow: 0px 14px 45px rgba(136, 136, 136, 0.25)
+  margin 24px
+  overflow hidden
+  brr(4px)
+  box-shadow: 0 0 20px 6px rgba(136,136,136,.25)
+  img
+    position relative
+    max-width 100%
+    // box-shadow: 0px 14px 45px rgba(136, 136, 136, 0.25)
+    

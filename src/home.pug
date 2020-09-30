@@ -3,8 +3,10 @@ extends layout.pug
 block variabl
 	- var title = ""
 
-block header
-	//- include include/header
+	//- block header
+		//- include include/header
+
+block main
 
 	header(style="background-image: url(img/home.jpg)").header
 		.right-sidebar
@@ -25,13 +27,12 @@ block header
 					a(href="#") Residential Solar
 				li
 					a(href="#") About Us
+
 			.pulse-button--wrapper
 				a(href="#").pulse-button
 					+iconSvg('40', '40', '0 0 40 40', 'icon-pencil')
-			//- .pulse-bet
-			//- 	a(href="#").button-head.status-bet
-			//- 		span.icon-play
-			//- 			+iconSvg('40', '40', '0 0 40 40', 'icon-pencil')
+					//- +iconSvg('34', '32', '0 0 34 32', 'icon-star')
+
 		.container
 			.header-main
 				.logo
@@ -47,3 +48,7 @@ block header
 							a(href="#") Terms of Use
 						li
 							a(href="#") Privacy Statement
+	
+	//- main.section_main
+
+	//- include include/footer

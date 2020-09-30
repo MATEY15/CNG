@@ -3,19 +3,57 @@ extends layout.pug
 block variabl
 	- var title = ""
 
-block header
-	include include/header
+//- block header
+//- 	include include/header
 
 block main
 	main.section_main
 
-		.container
-
-			#fullpage
-				.section Text 1
-				.section Text 2
-				.section Text 3
-				.section Text 4
+		#fullpage
+			.section
+				block header
+					include include/header
+			.section
+				.home-sections
+					.container
+						.heading-default
+							h4.animate-item About Us
+						p.animate-item Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar sed vitae metus, arcu nec. Sed aliquet non rhoncus non. Turpis amet parturient tortor, tempus praesent nulla dolor. Adipiscing lobortis vel, consequat, massa mollis sed vivamus. Euismod eget id ipsum, et elit odio tempor. Leo lectus at tristique quam mollis lorem tristique quis. Nec suscipit amet, velit nibh consectetur. Velit diam diam integer enim. Nibh elementum etiam at imperdiet bibendum vulputate amet bibendum.
+			.section
+				.home-sections
+					.container
+						.heading-default
+							h4.animate-item Our Mission
+						p.animate-item Nibh nulla vitae mi praesent sed volutpat facilisis quisque nunc. Est enim viverra sit tempus ultrices magna lectus ultrices. Fermentum, purus vitae tellus pretium. Ipsum, sollicitudin pretium praesent tincidunt vel cras tristique sed. Nisl, amet pharetra amet tortor fames mi. Leo id urna sit laoreet adipiscing eu velit augue. Sit vitae, ullamcorper in adipiscing eget. Turpis nunc vestibulum, quis sed vivamus purus dictum arcu. Lorem libero, diam libero.
+						.button-wrapper
+							a(href="#").button.animate-item Contact Us
+			.section
+				.container
+					.home-slider
+						.slider-items.animate-item
+							.slider-items--img
+								img(src="img/slider-1.png", alt="")
+						.slider-items.animate-item
+							.slider-items--img
+								img(src="img/slider-2.png", alt="")
+						.slider-items.animate-item
+							.slider-items--img
+								img(src="img/slider-3.png", alt="")
+						.slider-items.animate-item
+							.slider-items--img
+								img(src="img/slider-1.png", alt="")
+						.slider-items.animate-item
+							.slider-items--img
+								img(src="img/slider-2.png", alt="")
+						.slider-items.animate-item
+							.slider-items--img
+								img(src="img/slider-3.png", alt="")
+			
+			.section
+				footer.footer#footer
+					p 111
+	
+	//- include include/footer
 
 			//- .pulse-bet
 			//- 	a(href="#").button-head.status-bet

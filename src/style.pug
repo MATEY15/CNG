@@ -1,0 +1,131 @@
+extends layout.pug
+
+block variabl
+	- var title = ""
+
+//- block header
+//- 	include include/header
+
+block main
+	main.section_main
+
+		.bloch
+			.section
+				//- block header
+				//- 	include include/header
+				header(style="background-image: url(img/style-bg.jpg)").header
+					.right-sidebar
+						ul.right-menu
+							li
+								a(href="#") Contacts
+							li
+								a(href="#") Consutling
+							li.active
+								a(href="#") Blog
+							li
+								a(href="#") Community
+							li
+								a(href="#") Design & Engineering
+							li
+								a(href="#") Commercial Solar
+							li
+								a(href="#") Residential Solar
+							li
+								a(href="#") About Us
+						.pulse-button--wrapper
+							a(href="#").pulse-button
+								+iconSvg('40', '40', '0 0 40 40', 'icon-pencil')
+					.container
+						.header-main
+							.logo
+								a(href="#").logo-link
+									img(src="img/logo.png", alt="Logo")
+							
+							.header-content
+								h1 Solar Design & PV Systems #[br]CNG Solar Engineering
+								p We are a California based solar energy engineering company providing solar PV system design, on grid solar system design, and residential solar system design
+							.header-bottom
+								ul.link-copy
+									li
+										a(href="#") Terms of Use
+									li
+										a(href="#") Privacy Statement
+			.section
+				.container
+					.image-main.offset-padding--image-main
+						.image-main--items(data-duration=".4")
+							a(href="#")
+								span.img-wrapper
+									img(src="img/image-main1.jpg", alt="")
+								span.img-main--name New Construction Solar
+						.image-main--items(data-duration=".6")
+							a(href="#")
+								span.img-wrapper
+									img(src="img/image-main2.jpg", alt="")
+								span.img-main--name Retrofit Systems
+						.image-main--items(data-duration=".8")
+							a(href="#")
+								span.img-wrapper
+									img(src="img/image-main3.jpg", alt="")
+								span.img-main--name Battery Systems
+			.section
+				.home-sections
+					.container
+						.heading-default
+							h4.animate-item New Construction Solar
+						p.animate-item Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis cras faucibus pellentesque tincidunt purus. Amet adipiscing nunc facilisis consequat aliquam mattis feugiat gravida. Nulla at at vestibulum cum dolor arcu, molestie habitasse cursus. Non aliquet at id rhoncus blandit et non eget id. Aliquam platea pellentesque sit diam scelerisque sem eu nulla. Sem aliquet nunc, faucibus tellus porta nunc a nibh quis. Commodo, cursus nisl in ac diam quam ullamcorper nec id. Eu tincidunt cursus ultricies nunc et neque fames eu dolor. A leo nisi ut convallis amet urna cras consectetur.
+						p.animate-item  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id facilisis lacus auctor neque elementum velit vestibulum, donec sapien. At dui ipsum nam interdum nulla nunc. A sapien, odio bibendum amet. Id accumsan, tincidunt id commodo. Mauris donec a leo elit lectus duis velit.
+						.button-wrapper
+							a(href="#").button.animate-item Get Started
+			.section
+				.home-sections
+					.container
+						.heading-default
+							h4.animate-item Retrofit Systems
+						p.animate-item Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis cras faucibus pellentesque tincidunt purus. Amet adipiscing nunc facilisis consequat aliquam mattis feugiat gravida. Nulla at at vestibulum cum dolor arcu, molestie habitasse cursus. Non aliquet at id rhoncus blandit et non eget id. Aliquam platea pellentesque sit diam scelerisque sem eu nulla. Sem aliquet nunc, faucibus tellus porta nunc a nibh quis. Commodo, cursus nisl in ac diam quam ullamcorper nec id. Eu tincidunt cursus ultricies nunc et neque fames eu dolor. A leo nisi ut convallis amet urna cras consectetur.
+						.button-wrapper
+							a(href="#").button.animate-item Get Started
+			
+			.section
+				.home-sections
+					.container
+						.heading-default
+							h4.animate-item Battery Systems
+						p.animate-item Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non pellentesque ac ut tristique. Nec volutpat molestie euismod et. Sit quam posuere nulla euismod orci posuere at. Elementum sit pellentesque nulla rhoncus. Vulputate vulputate nulla quisque duis mi. Id tristique adipiscing et natoque tempus rutrum massa. Id sem id odio a, nisi nunc.
+
+						p.animate-item Eu proin urna, aliquam, erat lorem nunc, pretium sociis sit. Aliquam nec viverra placerat sapien enim risus, morbi aenean. Diam hendrerit est aliquam feugiat a dignissim sem tincidunt consectetur. Sed nisl fermentum tincidunt fermentum a lectus sit. Dignissim accumsan porta suspendisse purus.
+						.button-wrapper
+							a(href="#").button.animate-item Get Started
+			.height-125
+
+	div#footer-scroll
+	footer.footer#footer
+		.container
+			.footer-head
+				a(href="#").logo-footer
+					img(src="img/logo.png", alt="")
+			
+			.footer-foot
+				.footer-contact
+					.contact-items
+						h4.name EMAIL
+						i.icon
+							img(src="img/icon-mail.svg", alt="")
+						.footer-contact--info
+							a(href="mailto:plans@cngsolarengineering.com") plans@cngsolarengineering.com
+					
+					.contact-items
+						h4.name PHONE
+						i.icon
+							img(src="img/icon-phone.svg", alt="")
+						.footer-contact--info
+							a(href="tel:1-818-617-0420") 1-818-617-0420
+					
+					.contact-items
+						h4.name FIND US
+						i.icon
+							img(src="img/icon-marker.svg", alt="")
+						.footer-contact--info
+							p 1245 San Fernando Rd. #[br] San Fernando, CA 91340
+		
+	//- div#endr End

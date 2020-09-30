@@ -1,12 +1,75 @@
 .footer
-	position absolute
+	position fixed
+	// position relative
 	left 0
 	bottom 0
 	width 100%
-	background: #5D1324
-	padding 80px 0 40px
+	background: #fff
 	overflow hidden
-	@media screen and (max-width: 900px)
-		padding 40px 0 0
-	@media screen and (max-width: 600px)
-		padding-top 20px
+	height 100vh
+	// top calc(100% - 380px)
+	// max-height: 380px
+	// trn(.25s)
+	&.stiky
+		position relative
+		// top 100%
+		
+		max-height: 100% !important
+
+	.container
+		display flex
+		// height 100vh
+		flex-direction: column
+		justify-content center
+
+.footer-head
+	min-height: 410px
+	padding-top 164px
+	display flex
+	justify-content center
+	.logo-footer
+		display inline-block
+		text-decoration none
+		// tt(0, -50px)
+		// opacity 0
+		// trn(.15s)
+		// &.stiky
+		// 	tt(0, 0px)
+		// 	opacity 1
+
+.footer-foot
+	padding-bottom 110px
+
+.footer-contact
+	display flex
+	.contact-items
+		width calc(100% / 3)
+		text-align center
+		h4
+			font-family: fa
+			font-style: normal
+			font-weight: 700
+			font-size: 48px
+			line-height: 60px
+			color: #191919
+			margin-bottom 34px
+		i.icon
+			display flex
+			min-height 50px
+			justify-content center
+			align-items center 
+			margin-bottom 25px
+		p, a
+			font-family: fa
+			font-style: normal
+			font-weight: normal
+			font-size: 20px
+			line-height: 28px
+			color: #191919
+			text-decoration none
+
+// #footer-scroll
+// 	min-height: 5px
+// 	background #000
+// 	position relative
+// 	z-index 100
