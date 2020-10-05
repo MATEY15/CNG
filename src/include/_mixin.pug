@@ -18,3 +18,42 @@ mixin button(name)
 mixin iconSvg(w, h, wp, id)
 	svg(width=w height=h viewBox=wp class=id)
 		use(xlink:href="img/icon/sprite.svg#"+id)
+
+mixin headerCrt(images)
+	header.header(style= images)
+		.right-sidebar
+			ul.right-menu
+				li
+					a(href="#") Contacts
+				li
+					a(href="#") Consutling
+				li.active
+					a(href="#") Blog
+				li
+					a(href="#") Community
+				li
+					a(href="#") Design & Engineering
+				li
+					a(href="#") Commercial Solar
+				li
+					a(href="#") Residential Solar
+				li
+					a(href="#") About Us
+			.pulse-button--wrapper
+				a(href="#").pulse-button
+					+iconSvg('40', '40', '0 0 40 40', 'icon-pencil')
+		.container
+			.header-main
+				.logo
+					a(href="#").logo-link
+						img(src="img/logo.png", alt="Logo")
+				
+				.header-content
+					h1 Solar Design & PV Systems #[br]CNG Solar Engineering
+					p We are a California based solar energy engineering company providing solar PV system design, on grid solar system design, and residential solar system design
+				.header-bottom
+					ul.link-copy
+						li
+							a(href="#") Terms of Use
+						li
+							a(href="#") Privacy Statement

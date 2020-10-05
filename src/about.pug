@@ -1,0 +1,121 @@
+extends layout.pug
+
+block variabl
+	- var title = ""
+
+block main
+
+	header(style="background-image: url(img/header-bg2.jpg)").header
+		.right-sidebar
+			.close-sidebar
+				span
+				span
+			ul.right-menu
+				li
+					a(href="#") Contacts
+				li
+					a(href="#") Consutling
+				li
+					a(href="#") Blog
+				li
+					a(href="#") Community
+				li
+					a(href="#") Design & Engineering
+				li
+					a(href="#") Commercial Solar
+				li
+					a(href="#") Residential Solar
+				li.active
+					a(href="#") About Us
+			.pulse-button--wrapper
+				a(href="#").pulse-button
+					+iconSvg('40', '40', '0 0 40 40', 'icon-pencil')
+		.container
+			.header-main
+				.logo
+					a(href="#").logo-link
+						img(src="img/logo.png", alt="Logo")
+					a(href="#").burger-icon
+						span
+						span
+						span
+				
+				.header-content
+					h1 Solar Design & PV Systems #[br]CNG Solar Engineering
+					p We are a California based solar energy engineering company providing solar PV system design, on grid solar system design, and residential solar system design
+				.header-bottom
+					ul.link-copy
+						li
+							a(href="#") Terms of Use
+						li
+							a(href="#") Privacy Statement
+
+	main.section_main
+
+		.bloch
+			.section
+				.home-sections
+					.container
+						.heading-default
+							h4.animate-item About Us
+						p.animate-item Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar sed vitae metus, arcu nec. Sed aliquet non rhoncus non. Turpis amet parturient tortor, tempus praesent nulla dolor. Adipiscing lobortis vel, consequat, massa mollis sed vivamus. Euismod eget id ipsum, et elit odio tempor. Leo lectus at tristique quam mollis lorem tristique quis. Nec suscipit amet, velit nibh consectetur. Velit diam diam integer enim. Nibh elementum etiam at imperdiet bibendum vulputate amet bibendum.
+			.section
+				.home-sections
+					.container
+						.heading-default
+							h4.animate-item Our Mission
+						p.animate-item Nibh nulla vitae mi praesent sed volutpat facilisis quisque nunc. Est enim viverra sit tempus ultrices magna lectus ultrices. Fermentum, purus vitae tellus pretium. Ipsum, sollicitudin pretium praesent tincidunt vel cras tristique sed. Nisl, amet pharetra amet tortor fames mi. Leo id urna sit laoreet adipiscing eu velit augue. Sit vitae, ullamcorper in adipiscing eget. Turpis nunc vestibulum, quis sed vivamus purus dictum arcu. Lorem libero, diam libero.
+						.button-wrapper
+							a(href="#").button.animate-item Contact Us
+			
+			.section.section-slider
+				.container
+					.home-slider
+						.slider-items.slider-animate(data-duration=".4")
+							.slider-items--img
+								img(src="img/slider-1.png", alt="")
+						.slider-items.slider-animate(data-duration=".6")
+							.slider-items--img
+								img(src="img/slider-2.png", alt="")
+						.slider-items.slider-animate(data-duration=".8")
+							.slider-items--img
+								img(src="img/slider-3.png", alt="")
+						.slider-items.slider-animate
+							.slider-items--img
+								img(src="img/slider-1.png", alt="")
+						.slider-items.slider-animate
+							.slider-items--img
+								img(src="img/slider-2.png", alt="")
+						.slider-items.slider-animate
+							.slider-items--img
+								img(src="img/slider-3.png", alt="")
+
+	div#footer-scroll
+	footer.footer#footer
+		.container
+			.footer-head
+				a(href="#").logo-footer
+					img(src="img/logo.png", alt="")
+			
+			.footer-foot
+				.footer-contact
+					.contact-items
+						h4.name EMAIL
+						i.icon
+							img(src="img/icon-mail.svg", alt="")
+						.footer-contact--info
+							a(href="mailto:plans@cngsolarengineering.com") plans@cngsolarengineering.com
+					
+					.contact-items
+						h4.name PHONE
+						i.icon
+							img(src="img/icon-phone.svg", alt="")
+						.footer-contact--info
+							a(href="tel:1-818-617-0420") 1-818-617-0420
+					
+					.contact-items
+						h4.name FIND US
+						i.icon
+							img(src="img/icon-marker.svg", alt="")
+						.footer-contact--info
+							p 1245 San Fernando Rd. #[br] San Fernando, CA 91340

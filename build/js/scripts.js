@@ -3285,10 +3285,61 @@ e=e._timeline}this._gc&&this._enabled(!0,!1),(this._totalTime!==a||0===this._dur
 //   }, 800);
 // }
 
+window.onload = setTimeout(function() {
+    var delayTime = 1.5
+        // $('.overlayer-load').addClass('is-active');
+    gsap.to('.load-one, .load-two, .load-three', .6, {
+        delay: 0,
+        width: 0,
+        ease: "power4.inOut"
+    })
+    gsap.to('.overlayer-load', .6, {
+        delay: 2,
+        display: 'none',
+        ease: "power4.inOut"
+    })
+    $('body').removeClass('overflow');
+    gsap.to('.logo-link', .4, {
+        delay: delayTime,
+        top: 0,
+        opacity: 1,
+        ease: 'power1.out',
+    })
+    gsap.to('.right-sidebar', .8, {
+        delay: delayTime,
+        right: 0,
+        opacity: 1,
+        ease: 'power1.out',
+    })
+    gsap.to('.header-content h1', .8, {
+        delay: delayTime,
+        top: 0,
+        opacity: 1,
+        ease: 'power1.out',
+    })
+    gsap.to('.header-content p', .8, {
+        delay: delayTime,
+        left: 0,
+        opacity: 1,
+        ease: 'power1.out',
+    })
+    gsap.to('.link-copy', .8, {
+        delay: delayTime,
+        bottom: 0,
+        opacity: 1,
+        ease: 'power1.out',
+    })
+    gsap.to('.pulse-button', 1.2, {
+        delay: delayTime,
+        bottom: -65,
+        opacity: 1,
+        ease: 'power1.out',
+    })
+
+}, 2000);
+
 // Variable
 var heightFoot;
-
-
 
 function heightFooter() {
     heightFoot = $('.footer').outerHeight();
@@ -3301,6 +3352,23 @@ heightFooter();
 $(window).resize(function() {
     heightFooter()
 });
+
+var menuOpen = function() {
+    $('.burger-icon').click(function(e) {
+        e.preventDefault();
+        $('.right-sidebar').toggleClass('is-active');
+    });
+    $(document).mouseup(function(e) {
+        var container = $(".right-sidebar");
+        if (container.has(e.target).length === 0) {
+            $('.right-sidebar').removeClass('is-active');
+        }
+    });
+    $('.close-sidebar').on('click', function() {
+        $('.right-sidebar').removeClass('is-active');
+    });
+};
+menuOpen();
 
 
 // $(".burger-menu").on("click", function() {  
@@ -3317,6 +3385,8 @@ $(".popup").magnificPopup({
 });
 
 /* Popup Window End */
+
+
 
 /* Slider Home */
 
@@ -3353,47 +3423,47 @@ $('.home-slider').slick({
 /* Animation */
 
 gsap.to('.default-section p', .8, {
-    delay: 1,
-    top: 0,
-    opacity: 1,
-    ease: 'power1.out',
-})
-gsap.to('.logo-link', .8, {
-    delay: 1,
-    top: 0,
-    opacity: 1,
-    ease: 'power1.out',
-})
-gsap.to('.right-sidebar', .8, {
-    delay: 1,
-    right: 0,
-    opacity: 1,
-    ease: 'power1.out',
-})
-gsap.to('.header-content h1', .8, {
-    delay: .9,
-    top: 0,
-    opacity: 1,
-    ease: 'power1.out',
-})
-gsap.to('.header-content p', .8, {
-    delay: .9,
-    left: 0,
-    opacity: 1,
-    ease: 'power1.out',
-})
-gsap.to('.link-copy', .8, {
-    delay: .9,
-    bottom: 0,
-    opacity: 1,
-    ease: 'power1.out',
-})
-gsap.to('.pulse-button', 1.2, {
-    delay: .9,
-    bottom: -65,
-    opacity: 1,
-    ease: 'power1.out',
-})
+        delay: 1,
+        top: 0,
+        opacity: 1,
+        ease: 'power1.out',
+    })
+    // gsap.to('.logo-link', .8, {
+    //     delay: 1,
+    //     top: 0,
+    //     opacity: 1,
+    //     ease: 'power1.out',
+    // })
+    // gsap.to('.right-sidebar', .8, {
+    //     delay: 1,
+    //     right: 0,
+    //     opacity: 1,
+    //     ease: 'power1.out',
+    // })
+    // gsap.to('.header-content h1', .8, {
+    //     delay: .9,
+    //     top: 0,
+    //     opacity: 1,
+    //     ease: 'power1.out',
+    // })
+    // gsap.to('.header-content p', .8, {
+    //     delay: .9,
+    //     left: 0,
+    //     opacity: 1,
+    //     ease: 'power1.out',
+    // })
+    // gsap.to('.link-copy', .8, {
+    //     delay: .9,
+    //     bottom: 0,
+    //     opacity: 1,
+    //     ease: 'power1.out',
+    // })
+    // gsap.to('.pulse-button', 1.2, {
+    //     delay: .9,
+    //     bottom: -65,
+    //     opacity: 1,
+    //     ease: 'power1.out',
+    // })
 
 var controller = new ScrollMagic.Controller();
 
@@ -3508,3 +3578,6 @@ $(".animate-item").each(function() {
 //     //methods
 //     // $.fn.fullpage.setAllowScrolling(false);
 // })
+
+
+// $('.footer').addClass('is-show');

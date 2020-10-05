@@ -1,0 +1,103 @@
+extends layout.pug
+
+block variabl
+	- var title = ""
+
+//- block header
+//- 	include include/header
+
+block main
+	header(style="background-image: url(img/contact-bg.jpg)").header
+		.right-sidebar
+			.close-sidebar
+				span
+				span
+			ul.right-menu
+				li.active
+					a(href="#") Contacts
+				li
+					a(href="#") Consutling
+				li
+					a(href="#") Blog
+				li
+					a(href="#") Community
+				li
+					a(href="#") Design & Engineering
+				li
+					a(href="#") Commercial Solar
+				li
+					a(href="#") Residential Solar
+				li
+					a(href="#") About Us
+			.pulse-button--wrapper
+				a(href="#").pulse-button
+					+iconSvg('40', '40', '0 0 40 40', 'icon-pencil')
+		.container
+			.header-main
+				.logo
+					a(href="#").logo-link
+						img(src="img/logo.png", alt="Logo")
+					a(href="#").burger-icon
+						span
+						span
+						span
+				
+				.header-content
+					h1 Contact Us
+					p Have a question or need some help with your PV system design? Get in touch with CNG solar Engineering and contact one of our expert solar engineers today. 
+				.header-bottom
+					ul.link-copy
+						li
+							a(href="#") Terms of Use
+						li
+							a(href="#") Privacy Statement
+
+	main.main
+		section.section-contact
+			.container
+				.contact-wrapper
+					.col-md-6
+						.contact-item
+							textarea(placeholder="Message")
+					.col-md-6
+						.contact-fifty
+							.col-md-6
+								.contact-item
+									input(type="text" placeholder="First Name")
+								.contact-item
+									input(type="text" placeholder="First Name")
+							.col-md-6
+								.contact-item
+									input(type="text" placeholder="E-mail")
+							.col-md-12
+								button.button.button-contact Contact Us
+
+	div#footer-scroll
+	footer.footer#footer
+		.container
+			.footer-head
+				a(href="#").logo-footer
+					img(src="img/logo.png", alt="")
+			
+			.footer-foot
+				.footer-contact
+					.contact-items
+						h4.name EMAIL
+						i.icon
+							img(src="img/icon-mail.svg", alt="")
+						.footer-contact--info
+							a(href="mailto:plans@cngsolarengineering.com") plans@cngsolarengineering.com
+					
+					.contact-items
+						h4.name PHONE
+						i.icon
+							img(src="img/icon-phone.svg", alt="")
+						.footer-contact--info
+							a(href="tel:1-818-617-0420") 1-818-617-0420
+					
+					.contact-items
+						h4.name FIND US
+						i.icon
+							img(src="img/icon-marker.svg", alt="")
+						.footer-contact--info
+							p 1245 San Fernando Rd. #[br] San Fernando, CA 91340

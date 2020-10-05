@@ -18,6 +18,7 @@ body
 	overflow-x: hidden
 	min-width 320px
 	// background: #e3e
+	color: #191919
 	&.overflow
 		overflow hidden
 
@@ -35,10 +36,18 @@ main
 	z-index 100
 	background #E6E8E6
 
-.align-right
+img.align-right
 	float right
-.align-left
+	margin-left 45px
+	margin-bottom 15px
+img.align-left
 	float left
+	margin-right 45px
+	margin-bottom 15px
+img.align-center
+	display block
+	max-width 100%
+	margin-bottom 25px
 
 h1, h2, h3, h4, h5, h6
 	font-family: fa
@@ -61,8 +70,8 @@ h6
 	box-sizing border-box
 	max-width 1160px
 	width 100%
-	padding-left 10px
-	padding-right 10px
+	padding-left 15px
+	padding-right 15px
 	margin 0 auto
 	@media screen and (max-width: 640px)
 		padding-left 20px

@@ -1,10 +1,57 @@
+.overlayer-load
+	position fixed
+	// background #e3e
+	height 100vh
+	width 100%
+	z-index 1000
+	&.is-active
+		.items-load
+			width 0
+	.items-load
+		position absolute
+		top 0
+		height 100vh
+		width 33.3333%
+		display block
+		z-index 10
+		transition width .8s cubic-bezier(0.65, 0.05, 0.36, 1)
+		&.load-one
+			right 0
+			background #989898
+		&.load-two
+			right 33.333%
+			background #989898
+		&.load-three
+			right 66.666%
+			background #989898
+
+	
+
+
+
 .header
 	position relative
 	height 100vh
+	min-height: 600px
 	background-size cover
 	background-position center 0
 	overflow hidden
 	z-index 100
+
+.burger-icon
+	position absolute
+	top 50px
+	right 15px
+	display none
+	width 24px
+	height 24px
+	span
+		display block
+		width 24px
+		height 2px
+		background #ffffff
+		&:not(:last-child)
+			margin-bottom 5px
 
 .right-sidebar
 	display flex
@@ -16,6 +63,25 @@
 	height 100vh
 	background: linear-gradient(270deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.4) 100%)
 	opacity 0
+
+.close-sidebar
+	position absolute
+	display none
+	width 24px
+	height 24px
+	left -35px
+	top 15px
+	span
+		position absolute
+		top 11px
+		display block
+		width 100%
+		height 2px
+		background #000
+		&:first-child
+			transform rotate(45deg)
+		&:last-child
+			transform rotate(-45deg)
 
 .right-menu
 	// position: absolute

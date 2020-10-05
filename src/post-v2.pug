@@ -1,0 +1,96 @@
+extends layout.pug
+
+block variabl
+	- var title = ""
+
+//- block header
+//- 	include include/header
+
+block main
+	header(style="background-image: url(img/blog-bg.jpg)").header
+		.right-sidebar
+			.close-sidebar
+				span
+				span
+			ul.right-menu
+				li
+					a(href="#") Contacts
+				li
+					a(href="#") Consutling
+				li.active
+					a(href="#") Blog
+				li
+					a(href="#") Community
+				li
+					a(href="#") Design & Engineering
+				li
+					a(href="#") Commercial Solar
+				li
+					a(href="#") Residential Solar
+				li
+					a(href="#") About Us
+			.pulse-button--wrapper
+				a(href="#").pulse-button
+					+iconSvg('40', '40', '0 0 40 40', 'icon-pencil')
+		.container
+			.header-main
+				.logo
+					a(href="#").logo-link
+						img(src="img/logo.png", alt="Logo")
+					a(href="#").burger-icon
+						span
+						span
+						span
+				
+				.header-content
+					h1 Blog Title
+					p We are a California based solar energy engineering company providing solar PV system design, on grid solar system design, and residential solar system design
+				.header-bottom
+					ul.link-copy
+						li
+							a(href="#") Terms of Use
+						li
+							a(href="#") Privacy Statement
+
+	main.main
+		section.blog-main
+			.container
+				.blog-post.blog-main--post-v2
+					h1 Article #1
+					img(src="img/post1.jpg", alt="Post Img").align-right
+					p Lacus sed viverra sed tincidunt sed quam. Tempus diam sem dui rhoncus sit. Pharetra faucibus sed pharetra cursus in nunc vel amet a. Rhoncus lacinia lobortis a consectetur id tortor, nullam donec. Magna ut sed id sit mattis tortor. Lacus, mi semper cras aliquam enim sem consectetur velit feugiat. Adipiscing pulvinar libero nulla ut gravida amet, faucibus. Netus ante purus, a sit. Vitae urna auctor ornare consequat bibendum. Ut phasellus placerat sagittis, commodo, arcu a, tellus. Ut donec odio morbi facilisis eget egestas nunc. Massa auctor vulputate dui ut volutpat morbi tempor. Quam sed viverra duis aliquam est vitae, ac, ornare aliquam. Et nibh bibendum turpis at suspendisse facilisis. Vitae parturient magna varius sagittis viverra ac. Sed ultrices habitant habitant adipiscing. Nulla adipiscing varius commodo neque. Convallis nulla tortor, turpis integer aliquam sed sit sed ut. Sapien volutpat mi ac aliquam enim, mus mi. Sed a aliquet vitae ullamcorper commodo tellus interdum. Amet fusce proin odio vel. Nullam tellus at senectus sit a tortor pellentesque sit. Proin feugiat volutpat rhoncus elementum pellentesque sit cras dui nibh. Sed hendrerit tristique ut et. Egestas nisi, in turpis vel in sit semper nulla cursus. Dictum quis enim tempor pharetra massa pharetra porttitor justo, pharetra. In ipsum cras scelerisque et sem. Vitae ut dignissim nibh tempus sed eros lectus. Lacinia iaculis mollis nam eget. Viverra odio placerat vitae dignissim sit dui. Lectus integer neque, ut lacus, lacus. Orci, mauris sem neque sem sit commodo. Rhoncus vulputate cursus et, ullamcorper.
+					p Ipsum at augue purus vitae. Sit aliquam consequat suspendisse habitant commodo non etiam justo massa. Sagittis ullamcorper id orci sed cursus condimentum magna ac. Venenatis, dui blandit nunc, dolor vulputate purus vitae leo. Vel blandit a, sed arcu, eget felis. Quam sed viverra duis aliquam est vitae, ac, ornare aliquam. Et nibh bibendum turpis at suspendisse facilisis. Vitae parturient magna varius sagittis viverra ac. Sed ultrices habitant habitant adipiscing. Nulla adipiscing varius commodo neque. Convallis nulla tortor, turpis integer aliquam sed sit sed ut. Sapien volutpat mi ac aliquam enim, mus mi.
+					p Sed a aliquet vitae ullamcorper commodo tellus interdum. Amet fusce proin odio vel. Nullam tellus at senectus sit a tortor pellentesque sit. Proin feugiat volutpat rhoncus elementum pellentesque sit cras dui nibh. Sed hendrerit tristique ut et. Egestas nisi, in turpis vel in sit semper nulla cursus. Dictum quis enim tempor pharetra massa pharetra porttitor justo, pharetra. In ipsum cras scelerisque et sem. Vitae ut dignissim nibh tempus sed eros lectus. Lacinia iaculis mollis nam eget. Viverra odio placerat vitae dignissim sit dui. Lectus integer neque, ut lacus, lacus. Orci, mauris sem neque sem sit commodo. Rhoncus vulputate cursus et, ullamcorper.
+					p Et at dis mattis enim tellus. Non nunc interdum magna ligula mattis congue varius sollicitudin. Suspendisse interdum turpis elementum amet, tristique luctus quisque. Nec mauris, accumsan, tempus elementum ullamcorper. Eu pretium odio amet eu ornare vivamus condimentum ipsum. Suspendisse cursus imperdiet sed eget. Aenean habitant cursus vitae amet, ipsum, vitae. Pellentesque sit integer eu pellentesque elit eros, est aliquam. Tincidunt sed diam sit commodo curabitur justo, lectus purus. Suspendisse odio dignissim ultrices gravida ut. Orci imperdiet turpis facilisi in in. Ut eget ultricies vel viverra viverra nunc placerat eu. Scelerisque facilisi molestie dignissim cursus. Sagittis ultrices aliquam amet enim ut leo feugiat et blandit.
+
+	div#footer-scroll
+	footer.footer#footer
+		.container
+			.footer-head
+				a(href="#").logo-footer
+					img(src="img/logo.png", alt="")
+			
+			.footer-foot
+				.footer-contact
+					.contact-items
+						h4.name EMAIL
+						i.icon
+							img(src="img/icon-mail.svg", alt="")
+						.footer-contact--info
+							a(href="mailto:plans@cngsolarengineering.com") plans@cngsolarengineering.com
+					
+					.contact-items
+						h4.name PHONE
+						i.icon
+							img(src="img/icon-phone.svg", alt="")
+						.footer-contact--info
+							a(href="tel:1-818-617-0420") 1-818-617-0420
+					
+					.contact-items
+						h4.name FIND US
+						i.icon
+							img(src="img/icon-marker.svg", alt="")
+						.footer-contact--info
+							p 1245 San Fernando Rd. #[br] San Fernando, CA 91340
+		
+	//- div#endr End

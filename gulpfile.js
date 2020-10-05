@@ -84,7 +84,7 @@ gulp.task('css', function() {
                     mqpacker({
                         sort: sortCSSmq
                     }),
-                    pxtorem
+                    // pxtorem
                 ])
             ]
         }))
